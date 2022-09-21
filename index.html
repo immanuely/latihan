@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>MIKROSKIL</title>
+    </head>
+    <body>
+        <h1>PUNNY WEB</h1>
+        <p>Website dapat segera di akses lengkap</p>
+    </body>
+    <p>pada</p>
+    <p id="now"></p>
+    <input type="text" id="user_email">
+    <button id="notif">
+        Getnotifed
+    </button>
+    <script>
+        let tanggal_hari_ini = new Date(Date.now()),
+        now = document.getElementById("now")
+        now.innerHTML = tanggal_hari_ini.toLocaleDateString()
+
+        let notif = document.getElementById("notif")
+        notif.onclick = () => {
+            let user_email = document.getElementById('user_email').value
+            alert("kami akan memberikan notifikasi ke " +user_email+ " terimakasih")
+        }
+    </script>
+</html>
